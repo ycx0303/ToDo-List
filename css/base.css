@@ -1,0 +1,199 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+/*整体背景色*/
+body {
+    background: #9763ce;
+}
+
+/*主体样式*/
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.task-list {
+    margin: 5px 0;
+}
+
+/*右浮动样式*/
+.float-right {
+    float: right;
+}
+
+/*设置阴影，背景色变化过渡时间*/
+button[type=submit], .task-item {
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -ms-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+}
+
+/*圆角样式*/
+.task-item, .task-detail-mask, .task-detail, input, button, textarea {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.task-item {
+     /*height: 40 px;*/
+    background: rgb(99, 173, 208);
+    color: rgb(3, 71, 105);
+    margin-top: 3px;
+}
+
+.task-item:hover {
+    background: rgb(3, 71, 105);
+    color: rgb(99, 173, 208);
+}
+
+.task-item.completed{
+    color:#eee;
+    /*background: rgba(255,255,255,0.2);*/
+    opacity:0.5;
+    box-shadow: inset 1px 1px 1px #888;
+    margin-top: 3px;
+}
+
+.task-item.completed:after{
+    content: '';
+    height: 1px;
+    background: #eee;
+    width: 98%;
+    float: right;
+    top: -9px;
+    position: relative;
+    color: #000;
+    display: block;
+}
+
+.task-content {
+    margin-left: 10px;;
+}
+
+input[type=text], input[type=date], textarea {
+    float: left;
+    width: 90%;
+    display: block;
+    background: #eee;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+textarea {
+    min-height: 130px;
+    left: 50%;
+    width:100%;
+}
+
+input[type=date],
+.task-detail input[name=content]{
+    width:100%;
+}
+
+textarea:focus,
+textarea:hover,
+input[type=text]:hover,
+input[type=text]:focus,
+input[type=date]:hover,
+input[type=date]:focus {
+    background: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.add-task button[type=submit] {
+    width: 9.5%;
+    margin-left: 0.5%;
+}
+
+button[type=submit],
+button.confirm{
+    color: rgb(3, 71, 105);
+    background: rgb(99, 173, 208);
+}
+
+button[type=submit]:hover,
+button.confirm:hover{
+    background: rgb(3, 71, 105);
+    color: rgb(99, 173, 208);
+}
+
+button.confirm{
+    margin-right: 10px;
+}
+
+.task-detail,
+.task-detail-mask {
+    position: absolute;
+    display: none;
+}
+
+.task-detail {
+    background: #ffffff;
+    color: #333;
+    width: 36%;
+    height: 316px;
+    padding: 10px;
+    top:0;
+    right: 0;
+}
+
+.task-detail .content {
+    padding: 10px 0;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.task-detail-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(30, 30, 30, .3);
+}
+
+.action {
+    color: #0b608a;
+    font-size: 90%;
+}
+
+.action:hover {
+    color: rgb(99, 173, 208);
+}
+
+.task-detail .input-item{
+    margin-bottom: 6px;
+    display: block;
+}
+
+.msg {
+    display: none;
+    text-align: center;
+    background: #ffff00;
+    padding:10px;
+}
+
+.alerter{
+    width:0;
+    height:0;
+}

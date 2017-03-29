@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="msg"></div>
+<div class="container"><!--总容器开始-->
+    <h1>ToDo List</h1>
+    <form class="add-task"> <!--添加任务标题开始-->
+        <input type="text"
+               name="content"
+               placeholder="e.g. 多喝热水"
+               autofocus
+               autocomplete="off"
+        >
+        <button type="submit" name="add_submit">submit</button>
+    </form><!--添加任务标题结束-->
+    <div class="task-list"><!--任务清单开始-->
+        <!--<div class="task-item">-->
+        <!--<span><input type="checkbox"></span>-->
+        <!--<span class="task-content">item content 1</span>-->
+        <!--<span>delete</span>-->
+        <!--<span>detail</span>-->
+        <!--</div>-->
+    </div><!--任务清单结束-->
+    <div class="task-detail-mask">
+    </div>
+    <div class="task-detail"><!--任务详情开始-->
+        <div>
+            <div class="content"><!--任务标题开始-->
+                记得多喝热水！
+            </div><!--任务标题结束-->
+            <div class="desc"><!--任务描述开始-->
+                <textarea id="description"></textarea>
+            </div><!--任务描述结束-->
+            <div class="remind"><!--任务提醒开始-->
+                <input type="date">
+                <!--<button type="submit">submit</button>-->
+            </div><!--任务提醒结束-->
+        </div>
+    </div><!--任务详情结束-->
+</div><!--总容器结束-->
+<video src="alert.mp3" class="alerter"></video>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script src="store/store.js"></script>
+<script src="js/base.js"></script>
+</body>
+</html>
